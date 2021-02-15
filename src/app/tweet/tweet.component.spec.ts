@@ -1,25 +1,20 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 import { IonicModule } from "@ionic/angular";
 import { RouterModule } from "@angular/router";
-import { TweetComponentModule } from "../tweet/tweet.module";
 
-import { HomePage } from "./home.page";
+import { TweetComponent } from "./tweet.component";
 
-describe("HomePage", () => {
-  let component: HomePage;
-  let fixture: ComponentFixture<HomePage>;
+describe("TweetComponent", () => {
+  let component: TweetComponent;
+  let fixture: ComponentFixture<TweetComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [HomePage],
-      imports: [
-        IonicModule.forRoot(),
-        TweetComponentModule,
-        RouterModule.forRoot([]),
-      ],
+      declarations: [TweetComponent],
+      imports: [IonicModule.forRoot(), RouterModule.forRoot([])],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(HomePage);
+    fixture = TestBed.createComponent(TweetComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

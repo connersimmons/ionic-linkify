@@ -1,0 +1,18 @@
+<ion-item *ngIf="tweet">
+  <div slot="start"></div>
+  <ion-label class="ion-text-wrap">
+    <h2>
+      {{ tweet.username }}
+      <span class="date">
+        <!-- <ion-note>{{ tweet.date | date: "shortDate" }}</ion-note> -->
+        <ion-icon
+          name="chevron-forward"
+          size="small"
+          *ngIf="isIos()"
+        ></ion-icon>
+      </span>
+    </h2>
+    <!-- <h3>{{ message.subject }}</h3> -->
+    <p [innerHTML]="tweet.text | linkify"></p>
+  </ion-label>
+</ion-item>
